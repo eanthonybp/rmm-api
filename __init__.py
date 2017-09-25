@@ -7,3 +7,4 @@ db = SQLAlchemy(app)
 
 from welcome import views
 from takecontrol import views
+from user import views
