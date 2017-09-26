@@ -1,8 +1,8 @@
 from flask_init import app
 from flask import render_template, redirect, url_for, session, request
 from user.form import RegisterForm, LoginForm
-from user.models import User
-from user.decorators import login_required
+#from user.models import User
+# from user.decorators import login_required
 
 @app.route('/login', methods=('GET','POST'))
 def login():
@@ -36,6 +36,6 @@ def register():
     return render_template('user/register.html',form=form)
     
 @app.route('/login_success')
-@login_required
+# @login_required
 def login_success():
     return "Author Logged In"
